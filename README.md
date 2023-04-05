@@ -3,14 +3,14 @@
 ## Steps to Run
 
 1. create vitual enviroment
-    python -m venv ./venv
-    ./venc/Scripts/activate
+        python -m venv ./venv
+        ./venc/Scripts/activate
 2. Install dependencies from requirements.txt
-    pip install -r requirements.txt
+        pip install -r requirements.txt
 3. Import Data(keep in mind of csv file names check import_data.py)
-    python import_data.py 
+        python import_data.py 
 4. Run the API
-    uvicorn main:app --host 127.0.0.1 --port 8000
+        uvicorn main:app --host 127.0.0.1 --port 8000
 
 # Store Uptime Downtime API
 
