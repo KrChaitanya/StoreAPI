@@ -5,7 +5,7 @@
 1. create vitual enviroment
         
         python -m venv ./venv
-        ./venc/Scripts/activate
+        ./venv/Scripts/activate
 2. Install dependencies from requirements.txt
         
         pip install -r requirements.txt
