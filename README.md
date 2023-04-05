@@ -3,38 +3,19 @@
 ## Steps to Run
 
 1. create vitual enviroment
+        
         python -m venv ./venv
         ./venc/Scripts/activate
 2. Install dependencies from requirements.txt
+        
         pip install -r requirements.txt
 3. Import Data(keep in mind of csv file names check import_data.py)
+        
         python import_data.py 
 4. Run the API
+        
         uvicorn main:app --host 127.0.0.1 --port 8000
 
-# Store Uptime Downtime API
-
-  
-
-## Steps to Run
-
-  
-
-1. create vitual enviroment
-
-    python -m venv ./venv
-
-    ./venc/Scripts/activate
-
-2. Install dependencies from requirements.txt
-
-    pip install -r requirements.txt
-
-3. Run the API
-
-    uvicorn main:app --host 127.0.0.1 --port 8000
-
-  
 
 ## Documentation
 
@@ -126,9 +107,7 @@ To use the API, follow these steps:
         /report/get_report/{report_id} route, replacing {report_id} with the
         UUID returned in step 1. If the report is still being generated, the
         API will return a "Running" status; otherwise, it will return the
-        completed report as a CSV file
-
-.
+        completed report as a CSV file.
 
 The generated report will include uptime and downtime data for each store within the specified time intervals (last hour, last day, and last week). The CSV file will have the following columns:
 
@@ -146,9 +125,7 @@ Suppose you have deployed the API, and you would like to generate a new report a
 
 1.  Use a tool like `curl`, Postman, or your favorite API client to send a `POST` request to the `/report/trigger_report` route:
 
-
-
-    curl -X POST http://<API_URL>/report/trigger_report 
+        curl -X POST http://<API_URL>/report/trigger_report 
 
 The API will respond with a JSON object containing the report ID:
 
@@ -158,9 +135,7 @@ The API will respond with a JSON object containing the report ID:
 
 2.  To retrieve the generated report, send a `GET` request to the `/report/get_report/{report_id}` route, replacing `{report_id}` with the UUID returned in step 1:
 
-  
-
-    curl -X GET http://<API_URL>/report/get_report/f0a1b2c3-d4e5-6789-abcd-ef0123456789
+        curl -X GET http://<API_URL>/report/get_report/f0a1b2c3-d4e5-6789-abcd-ef0123456789
 
 If the report is still being generated, the API will return a JSON object with the status "Running":
 
