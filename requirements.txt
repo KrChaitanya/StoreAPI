@@ -1,0 +1,5 @@
+fastapi==0.95.0
+pandas==1.5.3
+pytz==2023.3
+SQLAlchemy==2.0.8
+tqdm==4.65.0
